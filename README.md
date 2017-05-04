@@ -1,0 +1,1 @@
+# Spring GoF Patterns realization #
