@@ -1,6 +1,7 @@
 package guru.springframework.gof.factoryMethod;
 
 public abstract class Pizza {
+	
     public abstract void addIngredients();
 
     public void bakePizza() {

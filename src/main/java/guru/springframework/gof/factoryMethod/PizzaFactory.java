@@ -7,6 +7,7 @@ public class PizzaFactory extends BasePizzaFactory{
         switch (type.toLowerCase())
         {
             case "cheese":
+            	//dependence ----->
                 pizza = new CheesePizza();
                 break;
             case "pepperoni":
@@ -20,6 +21,7 @@ public class PizzaFactory extends BasePizzaFactory{
 
         pizza.addIngredients();
         pizza.bakePizza();
+        
         return pizza;
     }
 }

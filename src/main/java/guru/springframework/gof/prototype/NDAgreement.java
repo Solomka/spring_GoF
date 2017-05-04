@@ -1,6 +1,8 @@
 package guru.springframework.gof.prototype;
 
 /**
+ * 
+ * ConcretePrototype (TAndC and NDAgreement): Are classes that provide operations to clone its objects.
  * Created by Admin on 4/21/2015.
  */
 public class NDAgreement extends PrototypeCapableDocument {

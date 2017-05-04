@@ -11,7 +11,7 @@ public class SicilianPizzaFactory extends BasePizzaFactory {
     @Override
     public  Pizza createPizza(String type){
         Pizza pizza;
-       BaseToppingFactory toppingFactory= new SicilianToppingFactory();
+       BaseToppingFactory toppingFactory= SicilianToppingFactory.getSicilianToppingFactory();
         switch (type.toLowerCase())
         {
             case "cheese":

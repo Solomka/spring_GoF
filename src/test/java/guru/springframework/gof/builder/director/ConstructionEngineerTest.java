@@ -1,22 +1,27 @@
 package guru.springframework.gof.builder.director;
 
-import guru.springframework.gof.builder.builders.HouseBuilder;
+import org.junit.Test;
+
 import guru.springframework.gof.builder.builders.ConcreteHouseBuilder;
 import guru.springframework.gof.builder.builders.PrefabricatedHouseBuilder;
 import guru.springframework.gof.builder.product.House;
-import org.junit.Test;
 
 public class ConstructionEngineerTest {
 
-    @Test
-    public void testConstructHouse() throws Exception {
-        HouseBuilder concreteHouseBuilder = new ConcreteHouseBuilder();
-        ConstructionEngineer engineerA = new ConstructionEngineer(concreteHouseBuilder);
-        House houseA = engineerA.constructHouse();
-        System.out.println("House is: "+houseA);
-        PrefabricatedHouseBuilder prefabricatedHouseBuilder = new PrefabricatedHouseBuilder();
-        ConstructionEngineer engineerB = new ConstructionEngineer(prefabricatedHouseBuilder);
-        House houseB = engineerB.constructHouse();
-        System.out.println("House is: "+houseB);
-    }
+	@Test
+	public void testConstructHouse() throws Exception {
+		
+		//ConcreteHouse house = new ConcreteHouse(Foundation, Structure, Roof, furnished, painted);
+
+		Director engineer = new Director(new ConcreteHouseBuilder());
+		//Director engineer = new Director(new PrefabricatedHouseBuilder());
+		House house = engineer.constructHouse();
+		System.out.println("House is: " + house);
+
+		/*
+		engineer = new Director(new PrefabricatedHouseBuilder());
+		house = engineer.constructHouse();
+		System.out.println("House is: " + house);
+		*/
+	}
 }

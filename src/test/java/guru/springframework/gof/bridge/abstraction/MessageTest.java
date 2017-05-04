@@ -1,23 +1,19 @@
 package guru.springframework.gof.bridge.abstraction;
 
-import guru.springframework.gof.bridge.implementation.EmailMessageSender;
-import guru.springframework.gof.bridge.implementation.MessageSender;
-import guru.springframework.gof.bridge.implementation.TextMessageSender;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
+import guru.springframework.gof.bridge.implementation.EmailMessageSender;
+import guru.springframework.gof.bridge.implementation.TextMessageSender;
 
 public class MessageTest {
 
-    @Test
-    public void testSend() throws Exception {
-      MessageSender textMessageSender=new TextMessageSender();
-      Message textMessage=new TextMessage(textMessageSender);
-      textMessage.send();
+	@Test
+	public void testSend() throws Exception {
 
-       MessageSender emailMessageSender=new EmailMessageSender();
-       Message emailMessage=new TextMessage(emailMessageSender);
-       emailMessage.send();
-    }
+		Message textMessage = new TextMessage/*abstraction*/(new TextMessageSender()/*implementation*/);
+		textMessage.send();
+
+		Message emailMessage = new TextMessage/*abstraction*/(new EmailMessageSender()/*implementation*/);
+		emailMessage.send();
+	}
 }

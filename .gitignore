@@ -1,42 +1,24 @@
-# Compiled source #
-###################
-*.com
-*.class
-*.dll
-*.exe
-*.o
-*.so
 
-# Packages #
-############
-# it's better to unpack these files and commit the raw source
-# git has its own built in compression methods
-*.7z
-*.dmg
-*.gz
-*.iso
-*.rar
-*.tar
-*.zip
-
-# Logs and databases #
-######################
-*.log
-*.sqlite
-
-# OS generated files #
-######################
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
+# Eclipse
 
 .project
+.metadata
+bin/
+build/
 .classpath
-.idea
+.settings/
+
+# Maven
+
+log/
+target/
+
+#Eclipse STS
+
+.springBeans
+
+# Intellij
+
+.idea/
 *.iml
-atlassian-ide-plugin.xml
-target
+*.iws

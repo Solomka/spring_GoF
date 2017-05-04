@@ -2,6 +2,8 @@ package guru.springframework.gof.abstractFactory.product;
 
 import guru.springframework.gof.abstractFactory.BaseToppingFactory;
 
+//SicilianTopping
+// GourmentTopping
 public class CheesePizza extends Pizza {
     BaseToppingFactory toppingFactory;
     public CheesePizza(BaseToppingFactory toppingFactory){
