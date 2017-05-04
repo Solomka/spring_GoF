@@ -1,1 +1,1 @@
-# Gang of Four Design Patterns
+# Spring GoF Patterns realization #
